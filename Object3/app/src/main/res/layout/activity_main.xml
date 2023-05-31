@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.object3.MainActivity"
+    android:layout_margin="20dp"
+    android:id="@+id/holder">
+
+    <Button
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Намалювати"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/canvas_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/column"
+        app:layout_constraintTop_toBottomOf="@+id/draw"
+        app:layout_constraintHorizontal_weight="6"
+        app:layout_constraintVertical_weight="6"/>
+
+
+    <LinearLayout
+        android:id="@+id/row"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canvas_layout"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+
+    <LinearLayout
+        android:id="@+id/column"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/row"
+        app:layout_constraintEnd_toStartOf="@id/canvas_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/draw"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
